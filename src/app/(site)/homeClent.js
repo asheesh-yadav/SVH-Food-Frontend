@@ -304,7 +304,7 @@ export default function Home() {
             <Link href="/products" className="px-8 py-4 bg-gradient-to-r from-[#daa520] to-[#f5d791] text-black font-bold rounded-3xl text-lg shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300">
               🍽️ Explore Menu
             </Link>
-            <Link href="/catering" className="px-8 py-4 border-2 border-[#f5d791] text-[#f5d791] font-bold rounded-3xl text-lg hover:bg-[#f5d791] hover:text-black transition-all duration-300">
+            <Link href="/products" className="px-8 py-4 border-2 border-[#f5d791] text-[#f5d791] font-bold rounded-3xl text-lg hover:bg-[#f5d791] hover:text-black transition-all duration-300">
               🎉 Book Catering
             </Link>
           </div>

@@ -99,7 +99,7 @@ export const Header = () => {
       }
 
       const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/me`,
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/me`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -291,7 +291,7 @@ export const Header = () => {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/cart/remove`,
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/cart/remove`,
         {
           method: "DELETE",
           headers: {
@@ -416,7 +416,7 @@ export const Header = () => {
 
     try {
       const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/register`,
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/register`,
         {
           method: "POST",
           headers: {
@@ -526,12 +526,12 @@ export const Header = () => {
     return (
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a120a]/95 backdrop-blur-xl py-2">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <Link href="/" className="flex items-center justify-between">
             <span className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-black bg-gradient-to-r from-[#daa520] to-[#f5c542] bg-clip-text text-transparent">
               SVH Foods
             </span>
             <div className="w-10 h-10 rounded-full bg-[#1a251a] animate-pulse" />
-          </div>
+          </Link>
         </nav>
       </header>
     );
@@ -888,17 +888,17 @@ export const Header = () => {
             onValueChange={setActiveTab}
             className="w-full"
           >
-            <TabsList className="grid w-full grid-cols-2 bg-[#1a251a] border border-[#daa520]/20">
+            <TabsList className="grid w-full grid-cols-2 bg-[#daa520]/20 border border-[#daa520]">
               <TabsTrigger
                 value="login"
-                className="data-[state=active]:bg-[#daa520] data-[state=active]:text-[#0a120a]"
+                className="text-[#daa520] data-[state=active]:bg-[#daa520] data-[state=active]:text-[#0a120a] data-[state=active]:font-semibold"
               >
                 <LogIn className="w-4 h-4 mr-2" />
                 Login
               </TabsTrigger>
               <TabsTrigger
                 value="register"
-                className="data-[state=active]:bg-[#daa520] data-[state=active]:text-[#0a120a]"
+                className="text-[#daa520] data-[state=active]:bg-[#daa520] data-[state=active]:text-[#0a120a] data-[state=active]:font-semibold"
               >
                 <UserPlus className="w-4 h-4 mr-2" />
                 Register
@@ -910,7 +910,9 @@ export const Header = () => {
                 <CardContent className="p-0 pt-4">
                   <form onSubmit={handleLogin} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="login-email">Email</Label>
+                      <Label htmlFor="login-email" className="text-white">
+                        Email
+                      </Label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6a6558]" />
                         <Input
@@ -919,14 +921,16 @@ export const Header = () => {
                           placeholder="Enter your email"
                           value={loginEmail}
                           onChange={(e) => setLoginEmail(e.target.value)}
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="login-password">Password</Label>
+                      <Label htmlFor="login-password" className="text-white">
+                        Password
+                      </Label>
                       <div className="relative">
                         <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6a6558]" />
                         <Input
@@ -935,7 +939,7 @@ export const Header = () => {
                           placeholder="Enter your password"
                           value={loginPassword}
                           onChange={(e) => setLoginPassword(e.target.value)}
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>
@@ -961,7 +965,9 @@ export const Header = () => {
                 <CardContent className="p-0 pt-4">
                   <form onSubmit={handleRegister} className="space-y-4">
                     <div className="space-y-2">
-                      <Label htmlFor="register-name">Full Name</Label>
+                      <Label htmlFor="register-name" className="text-white">
+                        Full Name
+                      </Label>
                       <div className="relative">
                         <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6a6558]" />
                         <Input
@@ -970,14 +976,16 @@ export const Header = () => {
                           placeholder="Enter your full name"
                           value={registerName}
                           onChange={(e) => setRegisterName(e.target.value)}
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="register-email">Email</Label>
+                      <Label htmlFor="register-email" className="text-white">
+                        Email
+                      </Label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6a6558]" />
                         <Input
@@ -986,14 +994,16 @@ export const Header = () => {
                           placeholder="Enter your email"
                           value={registerEmail}
                           onChange={(e) => setRegisterEmail(e.target.value)}
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="register-password">Password</Label>
+                      <Label htmlFor="register-password" className="text-white">
+                        Password
+                      </Label>
                       <div className="relative">
                         <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#6a6558]" />
                         <Input
@@ -1002,14 +1012,17 @@ export const Header = () => {
                           placeholder="Create a password"
                           value={registerPassword}
                           onChange={(e) => setRegisterPassword(e.target.value)}
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <Label htmlFor="register-confirm-password">
+                      <Label
+                        htmlFor="register-confirm-password"
+                        className="text-white"
+                      >
                         Confirm Password
                       </Label>
                       <div className="relative">
@@ -1022,7 +1035,7 @@ export const Header = () => {
                           onChange={(e) =>
                             setRegisterConfirmPassword(e.target.value)
                           }
-                          className="pl-10 bg-[#1a251a] border-[#daa520]/30"
+                          className="pl-10 bg-[#1a251a] border-[#daa520]/30 text-white"
                           required
                         />
                       </div>

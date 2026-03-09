@@ -108,7 +108,7 @@ export default function ProductPage() {
       setAddingToCart(true);
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/api/cart/add`,
+        `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/cart/add`,
         {
           method: "POST",
           headers: {
