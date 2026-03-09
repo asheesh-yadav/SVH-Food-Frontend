@@ -1,0 +1,69 @@
+{
+  "name": "SVH Food - Veg & Non Veg Restaurants",
+  "short_name": "SVH Food",
+  "description": "SVH Food - Veg & Non Veg Restaurants",
+  "theme_color": "#ffffff",
+  "background_color": "#102252",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/icons/svh.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/svh.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/svh.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/svh-1536-2048.jpg",
+      "sizes": "1536x2048",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/icons/svh-1668-2388.jpg",
+      "sizes": "1668x2388",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/icons/svh-2048-1536.jpg",
+      "sizes": "2048x1536",
+      "type": "image/jpg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/icons/svh-2048-2732.jpg",
+      "sizes": "2048x2732",
+      "type": "image/jpg",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/icons/svh-2388-1668.jpg",
+      "sizes": "2388x1668",
+      "type": "image/jpg",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/icons/svh-2732-2048.jpg",
+      "sizes": "2732x2048",
+      "type": "image/jpg",
+      "form_factor": "wide"
+    }
+  ]
+}

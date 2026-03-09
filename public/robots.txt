@@ -1,0 +1,7 @@
+# Allow all bots to access everything except the /user/ section
+User-agent: *
+Allow: /
+# Disallow: /user/
+
+# Sitemap for search engine bots
+Sitemap: https://divyam.com/sitemap.xml
